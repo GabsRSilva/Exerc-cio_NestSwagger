@@ -25,4 +25,11 @@ model Cliente {
   bairro String @db.VarChar(100)
   cidade String @db.VarChar(100)
   estado String @db.VarChar(100)
+  cep String @db.VarChar(12) @default("01001000")
+}
+
+model User {
+  id Int @default(autoincrement()) @id
+  email String @db.VarChar(150)
+  password String @db.VarChar(70)
 }
